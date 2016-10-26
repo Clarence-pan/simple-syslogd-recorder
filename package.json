@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "node-argument-parser": "^0.1.0",
+    "debug": "^2.2.0",
+    "node-argument-parser": "^0.1.0"
   }
 }

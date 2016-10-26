@@ -1,10 +1,11 @@
 var fs = require('fs')
 var dgram = require('dgram')
 var net = require('net')
-var ArgsParser = require('node-argument-parser')
-var extend = Object.assign.bind(Object)
-
 var debug = require('debug')('syslogd');
+var ArgsParser = require('node-argument-parser')
+
+
+var extend = Object.assign.bind(Object)
 
 function noop() {
 }
@@ -109,7 +110,7 @@ function runFromCli() {
         }
     };
 
-    var outputFile = options.output ? fs.createWriteStream(options.output, "utf8") : process.stdout;
+    var outputFile = options.output ? fs.createWriteStream(options.output, {flags: 'a+', defaultEncoding: 'utf8'}) : process.stdout;
 
     process.on('exit', function () {
         if (outputFile && outputFile !== process.stdout) {

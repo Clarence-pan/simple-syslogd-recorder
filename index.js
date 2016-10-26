@@ -4,7 +4,7 @@ var net = require('net')
 var ArgsParser = require('node-argument-parser')
 var extend = Object.assign.bind(Object)
 
-var debug = console.log.bind(console);
+var debug = require('debug')('syslogd');
 
 function noop() {
 }
@@ -109,7 +109,6 @@ function runFromCli() {
         }
     };
 
-    console.log(options)
     var outputFile = options.output ? fs.createWriteStream(options.output, "utf8") : process.stdout;
 
     process.on('exit', function () {

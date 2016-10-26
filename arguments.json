@@ -1,0 +1,25 @@
+{
+  "arguments": [
+    {
+      "full": "host",
+      "short": "H",
+      "value": true,
+      "description": "Which host to listen on"
+    },
+    {
+      "full": "port",
+      "short": "p",
+      "value": true,
+      "description": "Which port to listen on"
+    },
+    {
+      "full": "output",
+      "short": "o",
+      "value": true,
+      "description": "Output file which logs will be appended to"
+    }
+  ],
+  "defaults": {
+    "help": true
+  }
+}

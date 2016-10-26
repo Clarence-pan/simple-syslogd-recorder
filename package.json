@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "node-argument-parser": "^0.1.0",
+  }
+}
